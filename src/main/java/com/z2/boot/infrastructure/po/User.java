@@ -1,16 +1,12 @@
-package com.z2.boot.domain.user.model;
+package com.z2.boot.infrastructure.po;
 
-import lombok.Builder;
 import lombok.Data;
 
 /**
  * Created by yzm on 2019.
  */
 @Data
-@Builder
-public class UserBo {
-
-    private Long id;
+public class User extends BaseModel {
     /**
      * 用户编码
      */

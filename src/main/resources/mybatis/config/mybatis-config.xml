@@ -4,6 +4,6 @@
         "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
     <typeAliases>
-        <package name="null"/>
+        <typeAlias type="com.z2.boot.infrastructure.po.User" alias="User"/>
     </typeAliases>
 </configuration>

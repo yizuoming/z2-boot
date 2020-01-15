@@ -1,5 +1,6 @@
 package com.z2.boot.infrastructure.dao;
 
+import com.z2.boot.infrastructure.po.User;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -7,4 +8,7 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface UserDao {
+
+    public int create(User user);
+
 }
