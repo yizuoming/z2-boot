@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.z2.boot.infrastructure.dao.UserDao">
+
+    <insert id="create" parameterType="User">
+
+        <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Long">
+            SELECT LAST_INSERT_ID()
+        </selectKey>
+        insert into user(code,name,account_type,create_id,create_name,modify_id,modify_name,create_time,modify_time)
+        values(
+        #{code},
+        #{name},
+        #{accountType},
+        #{createId},
+        #{createName},
+        #{modifyId},
+        #{modifyName},
+        now(),
+        now()
+        )
+    </insert>
+
+</mapper>
